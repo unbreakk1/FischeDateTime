@@ -16,7 +16,7 @@ public class DateTimeExample
         System.out.println("Date after adding 2 weeks: " + dateAfterTwoWeeks);
 
         // step3:
-        LocalDate specifiedFutureDate = LocalDate.of(2023, 12, 25);
+        LocalDate specifiedFutureDate = LocalDate.of(2026, 12, 25);
 
         if (currentDate.isBefore(specifiedFutureDate))
             System.out.println("The current date is before " + specifiedFutureDate);

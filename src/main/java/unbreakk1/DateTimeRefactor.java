@@ -5,7 +5,7 @@ import java.time.temporal.ChronoUnit;
 
 public class DateTimeRefactor
 {
-    private static final LocalDate SPECIFIED_FUTURE_DATE = LocalDate.of(2023, 12, 25);
+    private static final LocalDate SPECIFIED_FUTURE_DATE = LocalDate.now().plusYears(1);
     private static final LocalDate ARBITRARY_DATE_1 = LocalDate.of(2023, 10, 1);
     private static final LocalDate ARBITRARY_DATE_2 = LocalDate.of(2023, 10, 25);
 
