@@ -9,16 +9,16 @@ public class DateTimeExample
 {
     public static void main(String[] args)
     {
-        // Step 1:
+        // step1:
         LocalDate currentDate = LocalDate.now();
         System.out.println("Current Date: " + currentDate);
 
-        // Step 2:
+        // step2:
         LocalDate dateAfterTwoWeeks = currentDate.plusWeeks(2);
         System.out.println("Date after adding 2 weeks: " + dateAfterTwoWeeks);
 
-        // Step 3:
-        LocalDate specifiedFutureDate = LocalDate.of(2023, 12, 25); // Example future date: December 25, 2023
+        // step3:
+        LocalDate specifiedFutureDate = LocalDate.of(2023, 12, 25);
 
         if (currentDate.isBefore(specifiedFutureDate))
             System.out.println("The current date is before " + specifiedFutureDate);
@@ -27,7 +27,7 @@ public class DateTimeExample
          else
             System.out.println("The current date is equal to " + specifiedFutureDate);
 
-        // Step 4:
+        // step4:
         LocalDate arbitraryDate1 = LocalDate.of(2023, 10, 1);
         LocalDate arbitraryDate2 = LocalDate.of(2023, 10, 25);
 
