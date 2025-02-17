@@ -37,7 +37,8 @@ public class DateTimeExample
 
     private static String getComparisonMessage(LocalDate currentDate)
     {
-        return switch (currentDate.compareTo(DateTimeExample.SPECIFIED_FUTURE_DATE)) {
+        return switch (currentDate.compareTo(DateTimeExample.SPECIFIED_FUTURE_DATE))
+        {
             case -1 -> DATE_COMPARISON_PREFIX + "before " + DateTimeExample.SPECIFIED_FUTURE_DATE;
             case 1 -> DATE_COMPARISON_PREFIX + "after " + DateTimeExample.SPECIFIED_FUTURE_DATE;
             default -> DATE_COMPARISON_PREFIX + "equal to " + DateTimeExample.SPECIFIED_FUTURE_DATE;
