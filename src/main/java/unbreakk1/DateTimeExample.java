@@ -1,19 +1,37 @@
 package unbreakk1;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+
 public class DateTimeExample
 {
     public static void main(String[] args)
     {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Step 1:
+        LocalDate currentDate = LocalDate.now();
+        System.out.println("Current Date: " + currentDate);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Step 2:
+        LocalDate dateAfterTwoWeeks = currentDate.plusWeeks(2);
+        System.out.println("Date after adding 2 weeks: " + dateAfterTwoWeeks);
+
+        // Step 3:
+        LocalDate specifiedFutureDate = LocalDate.of(2023, 12, 25); // Example future date: December 25, 2023
+
+        if (currentDate.isBefore(specifiedFutureDate))
+            System.out.println("The current date is before " + specifiedFutureDate);
+        else if (currentDate.isAfter(specifiedFutureDate))
+            System.out.println("The current date is after " + specifiedFutureDate);
+         else
+            System.out.println("The current date is equal to " + specifiedFutureDate);
+
+        // Step 4:
+        LocalDate arbitraryDate1 = LocalDate.of(2023, 10, 1);
+        LocalDate arbitraryDate2 = LocalDate.of(2023, 10, 25);
+
+        long daysBetween = ChronoUnit.DAYS.between(arbitraryDate1, arbitraryDate2);
+        System.out.println("The difference in days between " + arbitraryDate1 + " and " + arbitraryDate2 + " is " + daysBetween + " days.");
     }
 }
