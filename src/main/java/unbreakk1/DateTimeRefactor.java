@@ -46,5 +46,4 @@ public class DateTimeRefactor
         long daysBetween = ChronoUnit.DAYS.between(DateTimeRefactor.ARBITRARY_DATE_1, DateTimeRefactor.ARBITRARY_DATE_2);
         System.out.println("The difference in days between " + DateTimeRefactor.ARBITRARY_DATE_1 + " and " + DateTimeRefactor.ARBITRARY_DATE_2 + " is " + daysBetween + " days.");
     }
-
 }
